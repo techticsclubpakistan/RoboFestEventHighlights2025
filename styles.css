@@ -1,0 +1,283 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D4F6CC;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #0e1131;
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-list li {
+    margin: 0 20px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: #EF5B0C;
+}
+
+/* Header styling */
+header {
+    background-color: #0e1131;
+    color: white;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center Text Section */
+.text-section {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.text-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    color: #EF5B0C;
+}
+
+.text-section p {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #3CCF4E;
+}
+
+/* Strip under header */
+.meet-strip {
+    background-color: #EF5B0C;
+    padding: 10px 15px;
+    color: white;
+    margin-top: 10px;
+}
+
+.meet-strip h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/* School container */
+.school-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+/* School block */
+.school-block {
+    background-color: white;
+    margin: 15px;
+    padding: 20px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.school-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #3CCF4E;
+}
+
+/* On hover, change inner ambassador appearance */
+.school-block:hover .ambassador {
+    transform: scale(1.05);
+    background-color: #003865;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.school-block:hover .ambassador h3 {
+    color: white;
+}
+
+/* School heading */
+.school-block h2 {
+    color: #003865;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Ambassador container */
+.ambassador-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.ambassador {
+    width: 110px;
+    height: 110px;
+    background-color: #eee;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    margin-left: -10px;
+}
+
+.ambassador:nth-child(2) {
+    margin-left: 10px;
+}
+
+.ambassador img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.ambassador h3 {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .school-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .school-block {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .text-section h1 {
+        font-size: 2em;
+    }
+
+    .text-section p {
+        font-size: 1em;
+    }
+
+    .meet-strip h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .school-block {
+        width: 95%;
+    }
+
+    .text-section h1 {
+        font-size: 1.8em;
+    }
+
+    .text-section p {
+        font-size: 0.9em;
+    }
+}
+
+/* --- Events and Highlights Section --- */
+.events-container {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.event-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.event-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.event-row img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event-description {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+.event-description h3 {
+    font-size: 1.8em;
+    color: #EF5B0C;
+    margin-bottom: 10px;
+}
+
+.event-description p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Responsive Events Section */
+@media (max-width: 768px) {
+    .event-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .event-row.reverse {
+        flex-direction: column;
+    }
+
+    .event-row img,
+    .event-description {
+        width: 100%;
+    }
+
+    .event-description {
+        padding: 10px;
+    }
+}
