@@ -221,51 +221,80 @@ header {
 
 /* --- Events and Highlights Section --- */
 .events-container {
-    margin: 40px auto;
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
+    padding: 40px 5%;
+    box-sizing: border-box;
+    background-color: #ffffff;
 }
 
+/* Individual Event Row */
 .event-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 30px 0;
-    flex-wrap: wrap;
+    margin: 40px 0;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f7fff9; /* subtle background */
+    width: 100%;
 }
 
+/* Reverse row (image right, text left) */
 .event-row.reverse {
     flex-direction: row-reverse;
 }
 
+/* Poster/Image styling */
 .event-row img {
     width: 45%;
-    border-radius: 10px;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+/* Text block */
 .event-description {
-    width: 50%;
-    padding: 20px;
-    text-align: left;
+    width: 55%;
+    text-align: justify;
+    padding: 10px;
 }
 
+/* Heading */
 .event-description h3 {
-    font-size: 1.8em;
-    color: #EF5B0C;
+    font-size: 2em;
     margin-bottom: 10px;
+    color: #EF5B0C;
 }
 
+/* Paragraph */
 .event-description p {
     font-size: 1em;
     color: #333;
+    line-height: 1.6;
+    text-align: justify;
 }
 
-/* Responsive Events Section */
+/* Hover effect on event row */
+.event-row:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background-color: #e8ffe8;
+}
+
+/* Optional: slight zoom on image */
+.event-row:hover img {
+    transform: scale(1.03);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .event-row {
         flex-direction: column;
-        text-align: center;
+        gap: 20px;
     }
 
     .event-row.reverse {
@@ -277,7 +306,7 @@ header {
         width: 100%;
     }
 
-    .event-description {
-        padding: 10px;
+    .event-description h3 {
+        font-size: 1.5em;
     }
 }
